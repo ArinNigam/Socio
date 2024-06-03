@@ -37,7 +37,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(
   cors({
-    origin: "https://socio-client-five.vercel.app/",
+    origin: "https://socio-client-five.vercel.app",
     methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   })
