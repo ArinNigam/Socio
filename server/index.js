@@ -72,7 +72,7 @@ const start = async () => {
 
    const io = new Server(server, {
      cors: {
-       origin: "*",
+       origin: "https://socio-client-five.vercel.app",
        credentials: true,
      },
    });
