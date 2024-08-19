@@ -111,7 +111,9 @@ const ChatWidget = ({ user }) => {
 
   useEffect(() => {
     if (user) {
-      socket.current = io(`${process.env.REACT_APP_BACKEND_URL}`);
+      socket.current = io(`${process.env.REACT_APP_BACKEND_URL}`,{
+        withCredentials: true,
+      });
       socket.current.emit("addUser", myself._id);
     } // eslint-disable-next-line
   }, [myself._id]);
