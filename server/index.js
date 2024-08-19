@@ -39,7 +39,6 @@ app.use(
   cors({
     origin: "https://socio-client-five.vercel.app",
     methods: ["GET", "POST", "PATCH", "DELETE"],
-    credentials: true,
   })
 );
 
@@ -73,7 +72,6 @@ const start = async () => {
    const io = new Server(server, {
      cors: {
        origin: "https://socio-client-five.vercel.app",
-       credentials: true,
      },
    });
     global.onlineUsers = new Map();
