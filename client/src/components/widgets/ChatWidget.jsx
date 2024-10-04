@@ -111,7 +111,7 @@ const ChatWidget = ({ user }) => {
 
   useEffect(() => {
     if (user) {
-      socket.current = io("https://socio-client-five.vercel.app", {
+      socket.current = io(`${process.env.REACT_APP_BACKEND_URL}`, {
         transports: ["websocket"],
         path: "/socket.io",
       });
