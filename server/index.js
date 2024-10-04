@@ -39,7 +39,7 @@ app.use(
   cors({
     origin: ["https://socio-client-five.vercel.app","https://socio-one.vercel.app/"],
     methods: ["GET", "POST", "PATCH", "DELETE"],
-    transports: ["websocket", "polling"]
+    transports: ["websocket"]
   })
 );
 

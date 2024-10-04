@@ -112,7 +112,8 @@ const ChatWidget = ({ user }) => {
   useEffect(() => {
     if (user) {
       socket.current = io("https://socio-client-five.vercel.app", {
-        transports: ["websocket", "polling"],
+        transports: ["websocket"],
+        path: "/socket.io",
       });
       socket.current.emit("addUser", myself._id);
     } // eslint-disable-next-line
