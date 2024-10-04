@@ -111,7 +111,7 @@ const ChatWidget = ({ user }) => {
 
   useEffect(() => {
     if (user) {
-      socket.current = io(`${process.env.REACT_APP_BACKEND_URL}`, {
+      socket.current = io("wss://socio-one.vercel.app", {
         transports: ["websocket", "polling"],
       });
       socket.current.emit("addUser", myself._id);
