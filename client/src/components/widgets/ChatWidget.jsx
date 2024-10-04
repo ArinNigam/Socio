@@ -112,6 +112,7 @@ const ChatWidget = ({ user }) => {
   useEffect(() => {
     if (user) {
       socket.current = io(`${process.env.REACT_APP_BACKEND_URL}`);
+      transports: ["websocket", "polling"], 
       socket.current.emit("addUser", myself._id);
     } // eslint-disable-next-line
   }, [myself._id]);
